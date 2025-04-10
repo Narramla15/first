@@ -1,0 +1,120 @@
+nikhil@nikhil:~$ git --version
+git version 2.34.1
+nikhil@nikhil:~$ mkdir demo2_c
+nikhil@nikhil:~$ cd demo2_c
+nikhil@nikhil:~/demo2_c$ ls
+nikhil@nikhil:~/demo2_c$ git i \nit
+git: 'i' is not a git command. See 'git --help'.
+
+The most similar commands are
+	init
+	am
+	diff
+	gc
+	mv
+	rm
+nikhil@nikhil:~/demo2_c$ git i init
+git: 'i' is not a git command. See 'git --help'.
+
+The most similar commands are
+	init
+	am
+	diff
+	gc
+	mv
+	rm
+nikhil@nikhil:~/demo2_c$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/nikhil/demo2_c/.git/
+nikhil@nikhil:~/demo2_c$ ls
+nikhil@nikhil:~/demo2_c$ ls -a
+.  ..  .git
+nikhil@nikhil:~/demo2_c$ git congig --global user.name "Narramla15"
+git: 'congig' is not a git command. See 'git --help'.
+
+The most similar command is
+	config
+nikhil@nikhil:~/demo2_c$ git config --global user.name "Narramla15"
+nikhil@nikhil:~/demo2_c$ git config --global user.email "cnarramla@gmail.com"
+nikhil@nikhil:~/demo2_c$ git config --list
+user.name=Narramla15
+user.email=cnarramla@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+nikhil@nikhil:~/demo2_c$ ls
+nikhil@nikhil:~/demo2_c$ git clone https://github.com/Narramla15/third.git
+Cloning into 'third'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+nikhil@nikhil:~/demo2_c$ cd third
+nikhil@nikhil:~/demo2_c/third$ ls
+README.md
+nikhil@nikhil:~/demo2_c/third$ gedit index.html
+nikhil@nikhil:~/demo2_c/third$ ls
+index.html  README.md
+nikhil@nikhil:~/demo2_c/third$ git add index.html
+nikhil@nikhil:~/demo2_c/third$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   index.html
+
+nikhil@nikhil:~/demo2_c/third$ git commit -m "10-04-2025"
+[main 0b00243] 10-04-2025
+ 1 file changed, 3 insertions(+)
+ create mode 100644 index.html
+nikhil@nikhil:~/demo2_c/third$ git remote set-url https://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@github.com/Narramla15/third
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+nikhil@nikhil:~/demo2_c/third$ git remote set-url https://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@github.com/Narramla15/third
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+nikhil@nikhil:~/demo2_c/third$ git remote set-url origin   https://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@github.com/Narramla15/third
+nikhil@nikhil:~/demo2_c/third$ ls
+index.html  README.md
+nikhil@nikhil:~/demo2_c/third$ git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 298 bytes | 298.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Narramla15/third
+   eae3229..0b00243  main -> main
+nikhil@nikhil:~/demo2_c/third$ ls
+index.html  README.md
+nikhil@nikhil:~/demo2_c/third$ index.html
+index.html: command not found
+nikhil@nikhil:~/demo2_c/third$ gedit index.html
+nikhil@nikhil:~/demo2_c/third$ git pull
+Already up to date.
+nikhil@nikhil:~/demo2_c/third$ 
+
+
